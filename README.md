@@ -1,2 +1,4 @@
 # Nano-Processor-Design
-all vhdl files and optional screenshots of simulations
+All vhdl files and optional screenshots of simulations
+
+Program ROM - DONE ✅
