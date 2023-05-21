@@ -1,7 +1,8 @@
 # Nano-Processor-Design
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/24b7ac63-57e2-49fd-9400-5081940fa8f5)
 <br>
-All VHDL files in relevant folders and optional screenshots of simulations for each component
+<br>
+*All VHDL files in relevant folders and optional screenshots of simulations for each component*
 
 ## Program ROM - DONE ✅
 **Note**:<br>
