@@ -39,7 +39,7 @@ architecture Behavioral of TwoLine3bitMUX_Sim is
 Component TwoLine3bitMUX
     Port ( Line0 : in STD_LOGIC_VECTOR (2 downto 0);
            Line1 : in STD_LOGIC_VECTOR (2 downto 0);
-           Selector : in STD_LOGIC;
+           Sel : in STD_LOGIC;
            LineOut : out STD_LOGIC_VECTOR (2 downto 0));
 end Component;
 
@@ -50,7 +50,7 @@ begin
 UUT: TwoLine3bitMUX PORT MAP(                                                                   
     Line0 => line0,
     Line1 => line1,
-    Selector => sel,
+    Sel => sel,
     LineOut => lineOut                                                                                                                                                   
 );
 
