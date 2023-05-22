@@ -25,7 +25,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity TwoLine3bitMUX is
     Port ( Line0 : in STD_LOGIC_VECTOR (2 downto 0);
            Line1 : in STD_LOGIC_VECTOR (2 downto 0);
-           Selector : in STD_LOGIC;
+           Sel : in STD_LOGIC;
            LineOut : out STD_LOGIC_VECTOR (2 downto 0));
 end TwoLine3bitMUX;
 
@@ -33,13 +33,8 @@ architecture Behavioral of TwoLine3bitMUX is
 
 begin
 
-    process(Line0, Line1, Selector)
-    begin
-        if Selector = '0' then
-            LineOut <= Line0;
-        else
-            LineOut <= Line1;
-        end if;
-    end process;
-    
+LineOut(0) <= (Line0(0) AND NOT(Sel)) OR (Line1(0) AND Sel);
+LineOut(1) <= (Line0(1) AND NOT(Sel)) OR (Line1(1) AND Sel);
+LineOut(2) <= (Line0(2) AND NOT(Sel)) OR (Line1(2) AND Sel);
+
 end Behavioral;
