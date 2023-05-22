@@ -25,7 +25,7 @@ Once '111' is reached the output will reset to '000' and C_out will become '1', 
 <br>
 
 
-## 2-way 3-bit Mulitplexer - DONE ✅
+## 2-way 3-bit Mulitplexer - Edit made 🟡
 
 **Note**:<br>
 When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed.
