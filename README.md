@@ -16,7 +16,7 @@ Simple Lookup table, uses 13-bit instructions so we can add include some more ad
 <br>
 
 
-## 3-Bit Adder DONE ✅
+## 3-Bit Adder - DONE ✅
 
 **Note**:<br>
 Adder only has one input, other input is always 1
@@ -25,14 +25,14 @@ Once '111' is reached the output will reset to '000' and C_out will become '1', 
 <br>
 
 
-## 2-way 3-bit Mulitplexer DONE ✅
+## 2-way 3-bit Mulitplexer - DONE ✅
 
 **Note**:<br>
 When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed.
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/f74aad5e-7c33-4791-9f12-1a113e32515f)
 
 
-## Program Counter NOT DONE ❌
+## Program Counter - NOT DONE ❌
 Some chatGPT code. Process clk works, using temporary variable to store count until process finished is good. Also must import 3-bit adder send current count to adder, and get back the next count value.
 Since next count would depend on previous instruction we must run the program counter half a cycle ahead.
 
