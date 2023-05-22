@@ -28,10 +28,11 @@ Once '111' is reached the output will reset to '000' and C_out will become '1', 
 <br>
 
 
-## 2-way 3-bit Mulitplexer - Edit made 🟡
+## 2-way 3-bit Mulitplexer - DONE ✅
 
 **Note**:<br>
 When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed.
+*Edit: Changed the code to use logic gates.*
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/f74aad5e-7c33-4791-9f12-1a113e32515f)
 
 
