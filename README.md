@@ -13,7 +13,7 @@
 ## Program ROM - DONE ✅
 
 **Note**:<br>
-Simple Lookup table, uses 13-bit instructions so we can add include some more additional instructions if we need.
+Simple Lookup table, uses 13-bit instructions so we can include some more additional instructions if we need.
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/df47c82d-e4ca-4464-bb0a-e5ca35c50dea)
 <br>
 <br>
@@ -43,7 +43,7 @@ Program Counter has an input and a output. While output will only be set when th
 
 ## Instruction Decoder - DONE ✅
 **Note**:<br>
-All instructions were tested and simulated. I have created a 13 bit instruction, so we can include extra instructions in the future is need be. Also we could use the zero flag from the 4bit adder to directly for the Jump instruction.
+All instructions were tested and simulated. I have created a 13 bit instruction, so we can include extra instructions in the future as need be. Also we could use the zero flag from the 4bit adder to directly for the Jump instruction.
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/b7811b2a-c1c4-414c-b110-0502941b280b)
 
 
