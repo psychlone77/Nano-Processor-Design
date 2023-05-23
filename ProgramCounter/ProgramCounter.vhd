@@ -33,19 +33,25 @@ end ProgramCounter;
 
 architecture Behavioral of ProgramCounter is
 
+component D_FF
+    Port(D : in STD_LOGIC;
+       Res : in STD_LOGIC;
+       Clk : in STD_LOGIC;
+       Q : out STD_LOGIC;
+       Qbar : out STD_LOGIC);
+end component;
+
 signal currentCount : std_logic_vector (2 downto 0);
 
 begin
 
-process(Clk)
-    begin
-        if falling_edge(Clk) then
-            if Reset = '1' then
-                currentCount <= "000";
-            else
-                currentCount <= Input;
-            end if;
-        end if;
-end process;
-Output <= currentCount;
+D_FF0 : D_FF
+    Port map ( D => Input(0), Clk => Clk, Res => Reset, Q => Output(0)); 
+
+D_FF1 : D_FF
+    Port map ( D => Input(1), Clk => Clk, Res => Reset, Q => Output(1)); 
+
+D_FF2 : D_FF
+    Port map ( D => Input(2), Clk => Clk, Res => Reset, Q => Output(2)); 
+
 end Behavioral;
