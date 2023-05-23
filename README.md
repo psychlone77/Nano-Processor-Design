@@ -38,6 +38,12 @@ When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed
 
 ## Program Counter - DONE ✅
 **Note**:<br>
-Program Counter has an input and a output. While output will only be set when the clock edge is 'falling'.
+Program Counter has an input and a output. While output will only be set when the clock edge is 'falling'. Had to use D-Flip flops from Lab5.
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/1b7b5496-5f06-43a1-a375-da9aa1956221)
+
+## Instruction Decoder - DONE ✅
+**Note**:<br>
+All instructions were tested and simulated. I have created a 13 bit instruction, so we can include extra instructions in the future is need be. Also we could use the zero flag from the 4bit adder to directly for the Jump instruction.
+![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/b7811b2a-c1c4-414c-b110-0502941b280b)
+
 
