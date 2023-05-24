@@ -55,3 +55,11 @@ All instructions were tested and simulated. I have created a 13 bit instruction,
 OverFlow and ZeroFlag are the main differences. Also input B is the input which will be converted to its negative when we try to subtract the 2 numbers by setting M = '1'.
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/37a04da8-3692-4177-9606-04dea3f59379)
 
+
+## Register Bank - DONE ✅
+
+**Note**:<br>
+We included 8 registers with a 3 to 8 decoder to select which register to enable. Also Register 0 is hardcoded to "0000" so it doesn't interfere with the adder when we want to select only one register.
+![image](https://github.com/psychlone77/Nano-Processor-Design/assets/129372525/04de7e32-02b9-42da-849f-68b5092c053e)
+
+
