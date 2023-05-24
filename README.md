@@ -63,3 +63,34 @@ We included 8 registers with a 3 to 8 decoder to select which register to enable
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/129372525/04de7e32-02b9-42da-849f-68b5092c053e)
 
 
+## 8 way 4-bit Multiplexer - NOT DONE 🟡
+
+**Note**:<br>
+We need to use logic gates to build it.
+
+        library ieee;
+        use ieee.std_logic_1164.all;
+
+        entity EightWay4BitMux is
+            port (
+                Sel3, Sel2, Sel1, Sel0 : in std_logic_vector(3 downto 0);
+                Input0, Input1, Input2, Input3, Input4, Input5, Input6, Input7 : in std_logic_vector(3 downto 0);
+                Output : out std_logic_vector(3 downto 0)
+            );
+        end EightWay4BitMux;
+
+        architecture Behavioral of EightWay4BitMux is
+        begin
+            process(Sel3, Sel2, Sel1, Sel0, Input0, Input1, Input2, Input3, Input4, Input5, Input6, Input7)
+            begin
+                Output <= (Sel3 and Sel2 and Sel1 and Sel0)     and Input0     or
+                          (Sel3 and Sel2 and Sel1 and not Sel0) and Input1     or
+                          (Sel3 and Sel2 and not Sel1 and Sel0) and Input2     or
+                          (Sel3 and Sel2 and not Sel1 and not Sel0) and Input3 or
+                          (Sel3 and not Sel2 and Sel1 and Sel0) and Input4     or
+                          (Sel3 and not Sel2 and Sel1 and not Sel0) and Input5 or
+                          (Sel3 and not Sel2 and not Sel1 and Sel0) and Input6 or
+                          (Sel3 and not Sel2 and not Sel1 and not Sel0) and Input7;
+            end process;
+        end Behavioral
+
