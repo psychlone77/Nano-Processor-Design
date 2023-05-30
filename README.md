@@ -9,6 +9,31 @@
 <br>
 <br>
 
+## Mulitplexers
+
+### 2-way 3-bit Mulitplexer - DONE ✅
+
+**Note**:<br>
+When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed.
+*Edit: Changed the code to use logic gates.*
+![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/f74aad5e-7c33-4791-9f12-1a113e32515f)
+<br>
+
+### 2-way 4-bit Mulitplexer - DONE ✅
+
+**Note**:<br>
+Similar to 2 way 3 bit multiplexer.
+![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/1b46cf04-f1c1-43b4-bda3-0b7054d0c72c)
+<br>
+
+### 8 way 4-bit Multiplexer - DONE ✅
+
+**Note**:<br>
+Used logic gates to build.
+![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/64f0056b-9ad2-4b2e-b327-271c7fb572d1)
+<br>
+
+
 
 ## Program ROM - DONE ✅
 
@@ -27,13 +52,6 @@ Once '111' is reached the output will reset to '000' and C_out will become '1', 
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/a131ad93-793b-46b9-9848-7504357e587c)
 <br>
 
-
-## 2-way 3-bit Mulitplexer - DONE ✅
-
-**Note**:<br>
-When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed.
-*Edit: Changed the code to use logic gates.*
-![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/f74aad5e-7c33-4791-9f12-1a113e32515f)
 
 
 ## Program Counter - DONE ✅
@@ -63,34 +81,4 @@ We included 8 registers with a 3 to 8 decoder to select which register to enable
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/129372525/04de7e32-02b9-42da-849f-68b5092c053e)
 
 
-## 8 way 4-bit Multiplexer - NOT DONE 🟡
-
-**Note**:<br>
-We need to use logic gates to build it.
-
-        library ieee;
-        use ieee.std_logic_1164.all;
-
-        entity EightWay4BitMux is
-            port (
-                Sel3, Sel2, Sel1, Sel0 : in std_logic_vector(3 downto 0);
-                Input0, Input1, Input2, Input3, Input4, Input5, Input6, Input7 : in std_logic_vector(3 downto 0);
-                Output : out std_logic_vector(3 downto 0)
-            );
-        end EightWay4BitMux;
-
-        architecture Behavioral of EightWay4BitMux is
-        begin
-            process(Sel3, Sel2, Sel1, Sel0, Input0, Input1, Input2, Input3, Input4, Input5, Input6, Input7)
-            begin
-                Output <= (Sel3 and Sel2 and Sel1 and Sel0)     and Input0     or
-                          (Sel3 and Sel2 and Sel1 and not Sel0) and Input1     or
-                          (Sel3 and Sel2 and not Sel1 and Sel0) and Input2     or
-                          (Sel3 and Sel2 and not Sel1 and not Sel0) and Input3 or
-                          (Sel3 and not Sel2 and Sel1 and Sel0) and Input4     or
-                          (Sel3 and not Sel2 and Sel1 and not Sel0) and Input5 or
-                          (Sel3 and not Sel2 and not Sel1 and Sel0) and Input6 or
-                          (Sel3 and not Sel2 and not Sel1 and not Sel0) and Input7;
-            end process;
-        end Behavioral
 
