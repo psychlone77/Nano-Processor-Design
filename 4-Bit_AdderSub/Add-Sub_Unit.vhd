@@ -1,7 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-
 entity Add_Sub_Unit is
 Port (  A : in STD_LOGIC_vector (3 downto 0); --First Input
         B : in STD_LOGIC_vector (3 downto 0); --Second Input, this input will be inversed when M=1
@@ -11,7 +10,6 @@ Port (  A : in STD_LOGIC_vector (3 downto 0); --First Input
         Zero_Flag : out STD_LOGIC;
         V : out STD_LOGIC); -- OverFlow bit
 end Add_Sub_Unit;
-
 
 
 architecture Behavioral of Add_Sub_Unit is
@@ -29,6 +27,7 @@ signal FA0_S, FA0_C, FA1_S, FA1_C, FA2_S, FA2_C, FA3_S, FA3_C, varV : std_logic;
 signal varB, varS : std_logic_vector(3 downto 0);
 
 begin
+    -- getting 2's complement of each bit in B using M
     varB(0) <= B(0) XOR M;
     varB(1) <= B(1) XOR M;
     varB(2) <= B(2) XOR M;
@@ -63,10 +62,10 @@ begin
             C_out => FA3_C); 
             
             
-    varV <= FA2_C XOR FA3_C;
+    varV <= FA2_C XOR FA3_C; --Logic for overflow bit
     V <= varV; 
-    C_out <= FA3_C;
+    C_out <= FA3_C; --Carry Out from final Full Adder
     S <= varS;
-    Zero_Flag <= NOT(varS(0) OR varS(1) OR varS(2) OR varS(3) OR varV);
+    Zero_Flag <= NOT(varS(0) OR varS(1) OR varS(2) OR varS(3) OR varV); --make sure all bits in S and overflow bit are 0
 
 end Behavioral;
