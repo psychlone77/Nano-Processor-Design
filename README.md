@@ -3,7 +3,10 @@
 *All VHDL files are in relevant folders and there are included screenshots of simulations for each component*
 
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/24b7ac63-57e2-49fd-9400-5081940fa8f5)
-<br> http://dilum.bandara.lk/wp-content/uploads/CourseNotes/CS2052CA/Lab-9-10-–-Nanoprocessor-Design-Competition.pdf
+<br>
+<br>
+http://dilum.bandara.lk/wp-content/uploads/CourseNotes/CS2052CA/Lab-9-10-–-Nanoprocessor-Design-Competition.pdf 
+<br>
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/f6c42d60-6524-4ac8-978b-5c4aa7db6c27)
 
 <br>
@@ -23,6 +26,7 @@ When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed
 
 **Note**:<br>
 Similar to 2 way 3 bit multiplexer.
+<br>
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/1b46cf04-f1c1-43b4-bda3-0b7054d0c72c)
 <br>
 
@@ -31,6 +35,8 @@ Similar to 2 way 3 bit multiplexer.
 **Note**:<br>
 Used logic gates to build.
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/64f0056b-9ad2-4b2e-b327-271c7fb572d1)
+<br>
+<br>
 <br>
 
 
@@ -60,12 +66,6 @@ Program Counter has an input and a output. While output will only be set when th
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/1b7b5496-5f06-43a1-a375-da9aa1956221)
 
 
-## Instruction Decoder - DONE ✅
-
-**Note**:<br>
-All instructions were tested and simulated. I have created a 13 bit instruction, so we can include extra instructions in the future as need be. Also we could use the zero flag from the 4bit adder to directly for the Jump instruction.
-![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/b7811b2a-c1c4-414c-b110-0502941b280b)
-
 
 ## 4-bit Adder-Sub Unit - DONE ✅
 
@@ -81,4 +81,10 @@ We included 8 registers with a 3 to 8 decoder to select which register to enable
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/129372525/04de7e32-02b9-42da-849f-68b5092c053e)
 
 
+## Instruction Decoder - DONE ✅
+
+**Note**:<br>
+INCLUDE THE LOGIC FOR 13th BIT!!!!!
+All instructions were tested and simulated. I have created a 13 bit instruction, so we can include extra instructions in the future as need be. Also we could use the zero flag from the 4bit adder to directly for the Jump instruction.
+![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/b7811b2a-c1c4-414c-b110-0502941b280b)
 
