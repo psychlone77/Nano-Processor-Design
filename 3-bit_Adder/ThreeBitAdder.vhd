@@ -1,3 +1,4 @@
+--To be used to increment the Program Counter
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -19,7 +20,7 @@ architecture Behavioral of RCA_3bit is
      C_out: out std_logic);
      end component;
     
-     SIGNAL FA0_S, FA0_C, FA1_S, FA1_C, FA2_S, FA2_C  : std_logic; 
+     SIGNAL FA0_C, FA1_C, FA2_C  : std_logic; 
 begin
  FA_0 : FA
     port map (
@@ -43,6 +44,6 @@ begin
          S => S(2),
          C_Out => FA2_C);
          
-C_out <= FA2_C;
+C_out <= FA2_C; --C_out will be carry out from the final Full Adder
 
 end Behavioral;
