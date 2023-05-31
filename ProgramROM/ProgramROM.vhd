@@ -12,6 +12,7 @@ architecture Behavioral of ProgramROM is
 
 type rom_type is array (0 to 7) of std_logic_vector(12 downto 0);
 
+-- hardcode your instructions here
 signal ROM : rom_type := (
     "0000000000000", --0
     "0000000000000", --1
