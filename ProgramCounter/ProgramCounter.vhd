@@ -1,26 +1,8 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05/22/2023 11:05:25 AM
--- Design Name: 
--- Module Name: ProgramCounter - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+--Program Counter will hold the current count until the next clock cycle.
+--Note the D-flip-flops used here experince a change during the falling edge.
 
 entity ProgramCounter is
     Port (
@@ -34,11 +16,11 @@ end ProgramCounter;
 architecture Behavioral of ProgramCounter is
 
 component D_FF
-    Port(D : in STD_LOGIC;
-       Res : in STD_LOGIC;
-       Clk : in STD_LOGIC;
-       Q : out STD_LOGIC;
-       Qbar : out STD_LOGIC);
+    Port(  D : in STD_LOGIC;
+           Res : in STD_LOGIC;
+           Clk : in STD_LOGIC;
+           Q : out STD_LOGIC;
+           Qbar : out STD_LOGIC);
 end component;
 
 signal currentCount : std_logic_vector (2 downto 0);
