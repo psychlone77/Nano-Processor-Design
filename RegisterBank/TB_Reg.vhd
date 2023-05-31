@@ -36,36 +36,40 @@ entity TB_Reg is
 end TB_Reg;
 
 architecture Behavioral of TB_Reg is
+    
 component Reg is
     Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
            En : in STD_LOGIC;
            Clk : in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
+    
 signal D,Q:std_logic_vector(3 downto 0);
 signal En,Clk :std_logic;
+
 begin
-UUT: Reg PORT MAP(
-D=>D,
-En=>En,
-Clk => Clk,
-Q=>Q);
+    UUT: Reg PORT MAP(
+    D=>D,
+    En=>En,
+    Clk => Clk,
+    Q=>Q);
 
 
 Clk_process: process
-begin
- Clk<='0';
-  wait for 5ns ;
-Clk<='1';
-wait for 5 ns ;
-end process;
+    begin
+        Clk<='0';
+        wait for 5ns ;
+        Clk<='1';
+        wait for 5 ns ;
+    end process;
+            
 process 
-begin
-En<='1';
-D<="0000";
-wait for 20 ns;
-D<="1110";
-wait;
+    begin
+    En<='1';
+    D<="0000";
+    wait for 20 ns;
+    D<="1110";
+    wait;
 end process;
 
 
