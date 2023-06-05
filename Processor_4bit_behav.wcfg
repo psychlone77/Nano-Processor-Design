@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Processor_4bit_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Processor_4bit" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="11817765619654fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/Processor_4bit/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/sClk" type="logic">
+      <obj_property name="ElementShortName">sClk</obj_property>
+      <obj_property name="ObjectShortName">sClk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/OverFlow" type="logic">
+      <obj_property name="ElementShortName">OverFlow</obj_property>
+      <obj_property name="ObjectShortName">OverFlow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/ZeroFlag" type="logic">
+      <obj_property name="ElementShortName">ZeroFlag</obj_property>
+      <obj_property name="ObjectShortName">ZeroFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/led" type="array">
+      <obj_property name="ElementShortName">led[3:0]</obj_property>
+      <obj_property name="ObjectShortName">led[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group279" type="group">
+      <obj_property name="label">RegBank</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Processor_4bit/Reg0" type="array">
+         <obj_property name="ElementShortName">Reg0[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg0[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg1" type="array">
+         <obj_property name="ElementShortName">Reg1[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg1[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg2" type="array">
+         <obj_property name="ElementShortName">Reg2[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg2[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg3" type="array">
+         <obj_property name="ElementShortName">Reg3[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg3[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg4" type="array">
+         <obj_property name="ElementShortName">Reg4[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg4[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg5" type="array">
+         <obj_property name="ElementShortName">Reg5[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg5[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg6" type="array">
+         <obj_property name="ElementShortName">Reg6[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg6[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Reg7" type="array">
+         <obj_property name="ElementShortName">Reg7[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg7[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group280" type="group">
+      <obj_property name="label">4 bit Adder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Processor_4bit/MUX_84_A_out" type="array">
+         <obj_property name="ElementShortName">MUX_84_A_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">MUX_84_A_out[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/MUX_84_B_out" type="array">
+         <obj_property name="ElementShortName">MUX_84_B_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">MUX_84_B_out[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/C_out" type="logic">
+         <obj_property name="ElementShortName">C_out</obj_property>
+         <obj_property name="ObjectShortName">C_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/AddSubSel" type="logic">
+         <obj_property name="ElementShortName">AddSubSel</obj_property>
+         <obj_property name="ObjectShortName">AddSubSel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/AddSub_ZF" type="logic">
+         <obj_property name="ElementShortName">AddSub_ZF</obj_property>
+         <obj_property name="ObjectShortName">AddSub_ZF</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/AddSub_out" type="array">
+         <obj_property name="ElementShortName">AddSub_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">AddSub_out[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group283" type="group">
+      <obj_property name="label">Instruction Decoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Processor_4bit/PR_out" type="array">
+         <obj_property name="ElementShortName">PR_out[12:0]</obj_property>
+         <obj_property name="ObjectShortName">PR_out[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/RegEn" type="array">
+         <obj_property name="ElementShortName">RegEn[2:0]</obj_property>
+         <obj_property name="ObjectShortName">RegEn[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/RegSel_1" type="array">
+         <obj_property name="ElementShortName">RegSel_1[2:0]</obj_property>
+         <obj_property name="ObjectShortName">RegSel_1[2:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/RegSel_2" type="array">
+         <obj_property name="ElementShortName">RegSel_2[2:0]</obj_property>
+         <obj_property name="ObjectShortName">RegSel_2[2:0]</obj_property>
+         <obj_property name="CustomSignalColor">#0000FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/LoadSel" type="logic">
+         <obj_property name="ElementShortName">LoadSel</obj_property>
+         <obj_property name="ObjectShortName">LoadSel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/Value" type="array">
+         <obj_property name="ElementShortName">Value[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Value[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/JMP_flag" type="logic">
+         <obj_property name="ElementShortName">JMP_flag</obj_property>
+         <obj_property name="ObjectShortName">JMP_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/JMP_address" type="array">
+         <obj_property name="ElementShortName">JMP_address[2:0]</obj_property>
+         <obj_property name="ObjectShortName">JMP_address[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group292" type="group">
+      <obj_property name="label">PC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Processor_4bit/PC_out" type="array">
+         <obj_property name="ElementShortName">PC_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_out[2:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/AdderOut" type="array">
+         <obj_property name="ElementShortName">AdderOut[2:0]</obj_property>
+         <obj_property name="ObjectShortName">AdderOut[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/MUX_23_out" type="array">
+         <obj_property name="ElementShortName">MUX_23_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">MUX_23_out[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_4bit/AdderCarry" type="logic">
+         <obj_property name="ElementShortName">AdderCarry</obj_property>
+         <obj_property name="ObjectShortName">AdderCarry</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/sevenSeg" type="array">
+      <obj_property name="ElementShortName">sevenSeg[6:0]</obj_property>
+      <obj_property name="ObjectShortName">sevenSeg[6:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_4bit/MUX_24_out" type="array">
+      <obj_property name="ElementShortName">MUX_24_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">MUX_24_out[3:0]</obj_property>
+   </wvobject>
+</wave_config>
