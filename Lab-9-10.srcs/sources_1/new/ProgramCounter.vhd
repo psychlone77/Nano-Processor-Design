@@ -41,17 +41,16 @@ component D_FF
        Qbar : out STD_LOGIC);
 end component;
 
-signal currentCount : std_logic_vector (2 downto 0);
 
 begin
 
-D_FF0 : D_FF
-    Port map ( D => Input(0), Clk => Clk, Res => Reset, Q => Output(0)); 
-
-D_FF1 : D_FF
-    Port map ( D => Input(1), Clk => Clk, Res => Reset, Q => Output(1)); 
-
-D_FF2 : D_FF
-    Port map ( D => Input(2), Clk => Clk, Res => Reset, Q => Output(2)); 
+    D_FF0 : D_FF
+        Port map ( D => Input(0), Clk => Clk, Res => Reset, Q => Output(0)); 
+    
+    D_FF1 : D_FF
+        Port map ( D => Input(1), Clk => Clk, Res => Reset, Q => Output(1)); 
+    
+    D_FF2 : D_FF
+        Port map ( D => Input(2), Clk => Clk, Res => Reset, Q => Output(2)); 
 
 end Behavioral;

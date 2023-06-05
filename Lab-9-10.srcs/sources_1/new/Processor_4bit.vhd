@@ -108,6 +108,7 @@ architecture Behavioral of Processor_4bit is
     component Reg_Bank
         Port ( D : in STD_LOGIC_VECTOR (3 downto 0); --input bits
                RegEn : in STD_LOGIC_VECTOR (2 downto 0); --which register to enable
+               Reset : in STD_LOGIC;
                Clk : in STD_LOGIC;
                Out0 : out STD_LOGIC_VECTOR (3 downto 0);
                Out1 : out STD_LOGIC_VECTOR (3 downto 0);
@@ -209,6 +210,7 @@ begin
     RB : Reg_Bank 
         port map (  D => MUX_24_out,
                     RegEn => RegEn,
+                    Reset => Reset,
                     Clk => sClk,
                     Out0 => Reg0,
                     Out1 => Reg1,
