@@ -1,0 +1,5 @@
+add_force {/Processor_4bit/Clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/Processor_4bit/Reset} -radix bin {1 0ns} -cancel_after 1.6ms
+run 1.6ms
+add_force {/Processor_4bit/Reset} -radix bin {0 0ns}
+run 14ms
