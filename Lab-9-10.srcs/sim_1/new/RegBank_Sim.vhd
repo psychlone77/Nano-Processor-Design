@@ -31,6 +31,7 @@ architecture Behavioral of RegBank_Sim is
 component Reg_Bank is
 Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
        RegEn : in STD_LOGIC_VECTOR (2 downto 0);
+       Reset : in STD_LOGIC;
        Clk : in STD_LOGIC;
        Out0 : out STD_LOGIC_VECTOR (3 downto 0);
        Out1 : out STD_LOGIC_VECTOR (3 downto 0);
@@ -45,7 +46,7 @@ end component;
 
 signal D, Out0, Out1, Out2, Out3, Out4, Out5, Out6, Out7 : std_logic_vector (3 downto 0);
 signal regEn : std_logic_vector (2 downto 0);
-signal Clk : std_logic;
+signal Clk, reset : std_logic;
 
 begin
 
@@ -59,6 +60,7 @@ UUT : Reg_Bank Port Map (
     Out5 => Out5,
     Out6 => Out6,
     Out7 => Out7,
+    Reset => reset,
     Clk => Clk,
     RegEn => regEn);
     
@@ -76,11 +78,14 @@ process
     
 process
     begin
+        reset <= '1';
+        wait for 200ns;
+        reset <= '0';
         regEn <= "001";
-        D <= "0101";
+        D <= "0111";
         wait for 200ns;
         regEn <= "101";
-        D <= "1111";
+        D <= "1101";
         wait;
 end process;
 

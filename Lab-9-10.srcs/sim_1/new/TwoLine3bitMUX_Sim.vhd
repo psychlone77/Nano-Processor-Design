@@ -26,7 +26,7 @@ UUT: TwoLine3bitMUX PORT MAP(
 
 process
     begin
-        line0 <= "010";
+        line0 <= "101";
         line1 <= "111";
         sel <= '0';
         wait for 200ns;

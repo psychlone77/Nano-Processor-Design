@@ -62,9 +62,9 @@ process
     wait for 250ns;
     Reset <= '0';
     wait for 10ns;
-    Input <= "001";
+    Input <= "111";
     wait for 200ns;
-    Input <= "010";
+    Input <= "101";
     wait;
 end process;
 

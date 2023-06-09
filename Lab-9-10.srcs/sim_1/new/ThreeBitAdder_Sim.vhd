@@ -8,17 +8,15 @@ end ThreeBitAdder_Sim;
 architecture Behavioral of ThreeBitAdder_Sim is                                                 
 COMPONENT ThreeBitAdder                                                                        
     Port ( A : in STD_LOGIC_VECTOR (2 downto 0);
-           C_in : in STD_LOGIC;
            S : out STD_LOGIC_VECTOR (2 downto 0);
            C_out : out STD_LOGIC);                                          
 END COMPONENT;                                                                         
 SIGNAL A, S : std_logic_vector (2 downto 0);
-Signal C_in, C_out : std_logic;                     
+Signal C_out : std_logic;                     
 begin                                                                                  
 UUT: ThreeBitAdder PORT MAP(                                                                   
     A => A,                                                                                                                                                   
-    --B => B,                                                                                                                                                   
-    C_in => C_in,                                                                      
+    --B => B,                                                                                                                                                                                                                       
     C_out => C_out,                                                                    
     S => S                                                                                                                                                   
 );                                                                                     
@@ -28,7 +26,6 @@ UUT: ThreeBitAdder PORT MAP(
         A(0) <= '0';                                                                     
         A(1) <= '0';                                                                     
         A(2) <= '0';
-        C_in <= '0';
                                                                                                                                                                                                                          
         WAIT FOR 200 ns;
 		-- output from previous                                                               

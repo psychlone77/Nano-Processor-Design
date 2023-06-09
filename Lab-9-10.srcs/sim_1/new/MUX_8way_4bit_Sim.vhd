@@ -70,14 +70,14 @@ UUT: MUX_8way_4bit PORT MAP(
 process
     begin
         RegSel<="000";
-        Reg0<="1111";
-        Reg1<="1111";
-        Reg2<="1111";
-        Reg3<="1111";
-        Reg4<="1111";
-        Reg5<="1111";
-        Reg6<="1111";
-        Reg7<="1111";
+        Reg0<="0111";
+        Reg1<="1101";
+        Reg2<="1001";
+        Reg3<="0111";
+        Reg4<="0001";
+        Reg5<="1100";
+        Reg6<="1000";
+        Reg7<="1010";
         wait for 100 ns;
         RegSel<="001";
         wait for 100 ns;

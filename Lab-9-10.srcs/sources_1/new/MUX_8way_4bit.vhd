@@ -16,41 +16,65 @@ architecture Behavioral of MUX_8way_4bit is
 
 
 begin
-        S(0) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(0) ) OR    --000
-                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(0) ) OR    --001
-                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(0) ) OR    --010
-                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(0) ) OR    --011
-                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(0) ) OR    --100
-                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(0) ) OR    --101
-                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(0) ) OR    --110
-                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(0) );      --111
+    process(RegSel, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, Reg7)
+    begin
+        case (RegSel) is
+            when "000" =>
+                S <= Reg0;
+            when "001" =>
+                S <= Reg1;
+            when "010" =>
+                S <= Reg2;
+            when "011" =>
+                S <= Reg3;
+            when "100" =>
+                S <= Reg4;
+            when "101" =>
+                S <= Reg5;
+            when "110" =>
+                S <= Reg6;
+            when "111" =>
+                S <= Reg7;
+            when others =>
+                S <= (others => '0');
+        end case;
+    end process;
+    
+--        S(0) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(0) ) OR    --000
+--                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(0) ) OR    --001
+--                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(0) ) OR    --010
+--                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(0) ) OR    --011
+--                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(0) ) OR    --100
+--                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(0) ) OR    --101
+--                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(0) ) OR    --110
+--                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(0) );      --111
                 
-        S(1) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(1) ) OR    --000
-                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(1) ) OR    --001
-                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(1) ) OR    --010
-                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(1) ) OR    --011
-                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(1) ) OR    --100
-                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(1) ) OR    --101
-                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(1) ) OR    --110
-                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(1) );      --111
+--        S(1) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(1) ) OR    --000
+--                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(1) ) OR    --001
+--                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(1) ) OR    --010
+--                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(1) ) OR    --011
+--                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(1) ) OR    --100
+--                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(1) ) OR    --101
+--                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(1) ) OR    --110
+--                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(1) );      --111
                         
-        S(2) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(2) ) OR    --000
-                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(2) ) OR    --001
-                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(2) ) OR    --010
-                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(2) ) OR    --011
-                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(2) ) OR    --100
-                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(2) ) OR    --101
-                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(2) ) OR    --110
-                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(2) );      --111
+--        S(2) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(2) ) OR    --000
+--                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(2) ) OR    --001
+--                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(2) ) OR    --010
+--                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(2) ) OR    --011
+--                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(2) ) OR    --100
+--                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(2) ) OR    --101
+--                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(2) ) OR    --110
+--                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(2) );      --111
                                 
-        S(3) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(3) ) OR    --000
-                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(3) ) OR    --001
-                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(3) ) OR    --010
-                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(3) ) OR    --011
-                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(3) ) OR    --100
-                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(3) ) OR    --101
-                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(3) ) OR    --110
-                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(3) );      --111                                                        ;
+--        S(3) <= ( NOT(RegSel(0) or RegSel(1) or RegSel(2))      AND Reg0(3) ) OR    --000
+--                ( NOT(RegSel(1) or RegSel(2)) AND RegSel(0)     AND Reg1(3) ) OR    --001
+--                ( NOT(RegSel(0) or RegSel(2)) AND RegSel(1)     AND Reg2(3) ) OR    --010
+--                ( NOT(RegSel(2)) AND RegSel(0) AND RegSel(1)    AND Reg3(3) ) OR    --011
+--                ( NOT(RegSel(1) or RegSel(0)) AND RegSel(2)     AND Reg4(3) ) OR    --100
+--                ( NOT(RegSel(1)) AND RegSel(0) AND RegSel(2)    AND Reg5(3) ) OR    --101
+--                ( NOT(RegSel(0)) AND RegSel(1) AND RegSel(2)    AND Reg6(3) ) OR    --110
+--                ( RegSel(0) AND RegSel(1) AND RegSel(2)         AND Reg7(3) );      --111                                                        ;
  
 end Behavioral;
 

@@ -70,18 +70,23 @@ uut: InstructionDecoder
 process
 begin
     Ins_TB <= "0100010001010"; -- MOVI 001 1010
-    wait for 200ns;
+    wait for 100ns;
     Ins_TB <= "0001110100000"; -- ADD 111, 010 
-    wait for 200ns;
+    wait for 100ns;
     Ins_TB <= "0011100000000"; -- NEG 110
-    wait for 200ns;
+    wait for 100ns;
+    wait for 100ns;
+    Ins_TB <= "1110101110000"; -- SUB R2,R7
     Ins_TB <= "0111010000011"; -- JZR 101, 011
     ZeroFlag_TB <= '0';
-    wait for 200ns;
+    wait for 100ns;
     Ins_TB <= "0111010000011"; -- JZR 101, 011
     ZeroFlag_TB <= '1';
-    wait for 200ns;
-    Ins_TB <= "0101110000100";
+    wait for 100ns;
+    Ins_TB <= "1001110000101"; -- JNZ R7, 5
+    ZeroFlag_TB <= '0';
+    wait for 100ns;
+    Ins_TB <= "1001110000101"; -- JNZ R7, 5
     ZeroFlag_TB <= '1';
     wait;
 end process;

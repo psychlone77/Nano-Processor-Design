@@ -26,11 +26,11 @@ UUT: TwoLine4bitMUX PORT MAP(
 
 process
     begin
-        line0 <= "0101";
-        line1 <= "1111";
+        line0 <= "1101";
+        line1 <= "0111";
         sel <= '0';
         wait for 200ns;
-        line1 <= "1111";
+        line1 <= "0111";
         sel <= '1';
         wait;
     end process;

@@ -22,16 +22,16 @@ UUT : ProgramROM Port Map (
 
 process 
 begin
-    varAddress <= "010";
-    wait for 100ns;
-
-    varAddress <= "111";
-    wait for 100ns;
-
-    varAddress <= "010";
-    wait for 100ns;
-
     varAddress <= "000";
+    wait for 100ns;
+
+    varAddress <= "001";
+    wait for 100ns;
+
+    varAddress <= "010";
+    wait for 100ns;
+
+    varAddress <= "011";
     wait for 100ns;
 
     wait;

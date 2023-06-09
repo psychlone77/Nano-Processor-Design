@@ -38,21 +38,23 @@ architecture Behavioral of InstructionDecoder is
 
 begin
 
---Common
-RegEn <= Ins(9 downto 7);
-RegSel_1 <= Ins(9 downto 7);
-RegSel_2 <= Ins(6 downto 4);
-
--- JZR 011
-JMP_Address <= Ins(2 downto 0);
-JMP_Flag <= NOT(Ins(12)) AND Ins(11) AND Ins(10) AND ZeroFlag;
--- could use the zero flag instead of RegCheck
-
---MOVI 010
-LoadSel <= NOT(Ins(12)) AND Ins(11) AND NOT(Ins(10));
-Value <= Ins(3 downto 0);
-
---NEG 001, ADD 000
-AddSubSel <= NOT(Ins(12)) AND NOT(Ins(11)) AND Ins(10);
+    --Common
+    RegEn <= Ins(9 downto 7);
+    RegSel_1 <= Ins(9 downto 7);
+    RegSel_2 <= Ins(6 downto 4);
+    
+    -- JZR 011, JNR 100
+    JMP_Address <= Ins(2 downto 0);
+    JMP_Flag <= (NOT(Ins(12)) AND Ins(11) AND Ins(10) AND ZeroFlag) OR
+                (Ins(12) AND NOT(Ins(11)) AND NOT(Ins(10)) AND NOT(ZeroFlag));
+--    JMP_Flag <= ( Ins(12) AND not(Ins(11)) AND not(Ins(10)) ) XOR ZeroFlag;
+    
+    --MOVI 010
+    LoadSel <= NOT(Ins(12)) AND Ins(11) AND NOT(Ins(10));
+    Value <= Ins(3 downto 0);
+    
+    --NEG 001, ADD 000, SUB 111
+    AddSubSel <= ( (NOT(Ins(12)) AND NOT(Ins(11))) OR (Ins(12) AND Ins(11)) ) AND Ins(10);
+    
 
 end Behavioral;
