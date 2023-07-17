@@ -19,6 +19,7 @@ http://dilum.bandara.lk/wp-content/uploads/CourseNotes/CS2052CA/Lab-9-10-–-Nan
 **Note**:<br>
 When Selector is 0 Line0 will be passed and Selector is 1, Line 1 will be passed.
 *Edit: Changed the code to use logic gates.*
+<be>
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/f74aad5e-7c33-4791-9f12-1a113e32515f)
 <br>
 
