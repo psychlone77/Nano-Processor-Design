@@ -1,6 +1,7 @@
 # Nano-Processor-Design
 
 *All VHDL files are in relevant folders and there are included screenshots of simulations for each component*
+*The final files are inside Lab-9-10.srcs*
 
 ![image](https://github.com/psychlone77/Nano-Processor-Design/assets/127029023/24b7ac63-57e2-49fd-9400-5081940fa8f5)
 <br>
